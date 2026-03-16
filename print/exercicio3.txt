@@ -1,0 +1,7 @@
+Exercício 3 — Frase em múltiplas linhas
+
+Mostre a seguinte frase, cada parte em uma linha:
+
+Java é poderoso.
+Java é orientado a objetos.
+Java é muito usado no mercado.

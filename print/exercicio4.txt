@@ -1,0 +1,8 @@
+Exercício 4 — Desenho com print
+
+Usando System.out.println(), faça o programa mostrar o seguinte desenho:
+
+   *
+  ***
+ *****
+*******

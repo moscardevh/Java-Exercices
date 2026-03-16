@@ -1,0 +1,9 @@
+Exercício 2 — Apresentação pessoal
+
+Crie um programa que mostre na tela:
+
+Meu nome é Vitor.
+Tenho 25 anos.
+Estou estudando programação.
+
+(Pode trocar os dados se quiser.)

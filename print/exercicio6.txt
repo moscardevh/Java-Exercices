@@ -1,0 +1,22 @@
+Exercício — Perfil do usuário
+
+Crie um programa Java que:
+
+Crie as seguintes variáveis:
+
+nome
+
+idade
+
+altura
+
+estudandoJava (true ou false)
+
+Depois imprima na tela algo assim:
+
+Perfil do usuário
+-----------------
+Nome: Vitor
+Idade: 25
+Altura: 1.75
+Estudando Java: true

@@ -1,0 +1,9 @@
+Exercício 5 — Simular um recibo
+
+Mostre na tela algo parecido com um recibo:
+
+Loja do Programador
+--------------------
+Teclado: R$ 100
+Mouse:   R$ 50
+Total:   R$ 150

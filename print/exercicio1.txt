@@ -1,0 +1,6 @@
+Exercício 1 — Mensagem simples
+
+Crie um programa que imprima na tela:
+
+Olá, mundo!
+Estou aprendendo Java.
