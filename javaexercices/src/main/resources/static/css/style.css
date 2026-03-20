@@ -1,0 +1,100 @@
+/* -------------- fundo com imagem e blur -------------- */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #222;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+/* imagem de fundo */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("/images/code-bg.png") center/cover no-repeat; /* ajuste a imagem */
+  filter: blur(8px) brightness(0.6);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* -------------- header / título -------------- */
+.hero {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-family: "Fira Code", monospace;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 0px 2px 8px rgba(0,0,0,0.6);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 12px;
+  color: #e0e0e0;
+}
+
+/* -------------- grid de botões -------------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  max-width: 700px;
+  margin: 40px auto 60px auto;
+  padding: 0;
+  list-style: none;
+}
+
+/* -------------- novo botão .btn -------------- */
+.btn {
+  border: none;
+  width: 15em;
+  height: 5em;
+  border-radius: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: #1C1A1C;
+  cursor: pointer;
+  transition: all 450ms ease-in-out;
+  text-decoration: none; /* garante que não haja sublinhado */
+}
+
+.sparkle {
+  fill: #AAAAAA;
+  transition: all 800ms ease;
+}
+
+.text {
+  font-weight: 600;
+  color: #AAAAAA;
+  font-size: medium;
+}
+
+.btn:hover {
+  background: linear-gradient(0deg,#A47CF3,#683FEA);
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+              inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+              0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+              0px 0px 180px 0px #9917FF;
+  transform: translateY(-2px);
+}
+
+.btn:hover .text {
+  color: white;
+}
+
+.btn:hover .sparkle {
+  fill: white;
+  transform: scale(1.2);
+}
