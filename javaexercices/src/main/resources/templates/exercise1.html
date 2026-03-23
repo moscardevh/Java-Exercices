@@ -1,52 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Exercício 1</title>
-
-  <!-- mesma fonte da home -->
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="/css/style.css">
-  <!-- se quiser, pode criar outro CSS específico, mas o style.css atual já deve servir -->
+    <title>Exercise 1</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/exercise1.css">
 </head>
 <body>
+    <div class="container">
+        <div class="heading">Formulário de registro</div>
 
-  <div class="hero">
-    <h1>Exercício 1</h1>
-    <p>Cadastro simples — digite seus dados</p>
-  </div>
+        <p class="erro" th:if="${erro}" th:text="${erro}"></p>
 
-  <div class="form-container">
-    <form action="/exercicio1/result" method="get">
-      <!-- método GET é simples; se quiser POST, adapta depois -->
-      <div class="field">
-        <label for="nome">Nome:</label><br>
-        <input type="text" id="nome" name="nome" required />
-      </div>
+        <form action="/exercise1" method="post" class="form">
+            <label for="nome">Name:</label>
+            <input class="input" type="text" id="nome" name="nome" required th:value="${nome}"><br><br>
 
-      <div class="field">
-        <label for="idade">Idade:</label><br>
-        <input type="number" id="idade" name="idade" required min="0" />
-      </div>
+            <label for="idade">Age:</label>
+            <input class="input" type="text" id="idade" name="idade" required th:value="${idade}"><br><br>
 
-      <div class="field">
-        <label for="altura">Altura (m):</label><br>
-        <input type="text" id="altura" name="altura" required placeholder="ex: 1.75" />
-      </div>
+            <label for="altura">Height (in meters):</label>
+            <input class="input" type="text" id="altura" name="altura" required th:value="${altura}"><br><br>
 
-      <div class="field">
-        <button type="submit" class="btn">
-          <!-- ícone + texto, igual aos botões da home -->
-          <svg class="sparkle" width="24" height="24" viewBox="0 0 24 24">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/>
-          </svg>
-          <span class="text">Enviar</span>
-        </button>
-      </div>
-    </form>
-  </div>
-
+            <input class="submit" type="submit" value="Submit">
+        </form>
+    </div>
 </body>
 </html>
