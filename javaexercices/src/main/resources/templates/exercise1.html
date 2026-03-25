@@ -4,6 +4,11 @@
     <title>Exercise 1</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/exercise1.css">
+    <style th:inline="css">
+        body::before {
+            background-image: url("/images/bg-ex1.png");
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -11,15 +16,15 @@
 
         <p class="erro" th:if="${erro}" th:text="${erro}"></p>
 
-        <form action="/exercise1" method="post" class="form">
+        <form th:action="@{/exercise1/result}" method="post" class="form">
             <label for="nome">Name:</label>
-            <input class="input" type="text" id="nome" name="nome" required th:value="${nome}"><br><br>
+            <input class="input" type="text" id="nome" name="nome" required th:value="${nome}">
 
             <label for="idade">Age:</label>
-            <input class="input" type="text" id="idade" name="idade" required th:value="${idade}"><br><br>
+            <input class="input" type="text" id="idade" name="idade" required th:value="${idade}">
 
             <label for="altura">Height (in meters):</label>
-            <input class="input" type="text" id="altura" name="altura" required th:value="${altura}"><br><br>
+            <input class="input" type="text" id="altura" name="altura" required th:value="${altura}">
 
             <input class="submit" type="submit" value="Submit">
         </form>
