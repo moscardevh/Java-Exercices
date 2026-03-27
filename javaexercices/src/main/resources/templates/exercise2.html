@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Calculadora Java Pro</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/exercise2.css}">
+</head>
+<body>
+    <div class="container">
+        <div class="heading">Calculadora</div>
+
+        <div class="visor-container">
+            <span class="visor-text" id="visor">0</span>
+        </div>
+
+        <div class="calc-grid">
+            <button type="button" class="btn-calc btn-clear" id="btn-clear">C</button>
+            <button type="button" class="btn-calc btn-op js-op" value="porcentagem">%</button>
+            <button type="button" class="btn-calc btn-op js-op" value="dividir">÷</button>
+
+            <button type="button" class="btn-calc btn-number js-num" value="7">7</button>
+            <button type="button" class="btn-calc btn-number js-num" value="8">8</button>
+            <button type="button" class="btn-calc btn-number js-num" value="9">9</button>
+            <button type="button" class="btn-calc btn-op js-op" value="multiplicar">x</button>
+
+            <button type="button" class="btn-calc btn-number js-num" value="4">4</button>
+            <button type="button" class="btn-calc btn-number js-num" value="5">5</button>
+            <button type="button" class="btn-calc btn-number js-num" value="6">6</button>
+            <button type="button" class="btn-calc btn-op js-op" value="subtrair">-</button>
+
+            <button type="button" class="btn-calc btn-number js-num" value="1">1</button>
+            <button type="button" class="btn-calc btn-number js-num" value="2">2</button>
+            <button type="button" class="btn-calc btn-number js-num" value="3">3</button>
+            <button type="button" class="btn-calc btn-op js-op" value="somar">+</button>
+
+            <button type="button" class="btn-calc btn-number js-num btn-zero" value="0">0</button>
+            <button type="button" class="btn-calc btn-number js-num" value=".">.</button>
+            <button type="button" class="btn-calc btn-equal" id="btn-equals">=</button>
+        </div>
+
+        <div class="footer">
+            <a th:href="@{/}" class="back-link">Voltar ao Menu</a>
+        </div>
+    </div>
+
+    <script th:src="@{/js/calculator.js}"></script>
+</body>
+</html>

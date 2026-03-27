@@ -1,0 +1,151 @@
+/* 1. Configurações Gerais e Centralização */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    
+    /* Background Profissional: Gradiente Suave */
+    background-color: #e0eafc;
+    background-image: radial-gradient(at 0% 0%, hsla(210,100%,90%,1) 0, transparent 50%), 
+                      radial-gradient(at 100% 100%, hsla(190,100%,85%,1) 0, transparent 50%);
+    background-attachment: fixed;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 320px;
+}
+
+.heading {
+    text-align: center;
+    color: #1089d3;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 2. Estilização do Visor (Preparando para o Passo 2) */
+.visor-container {
+    background-color: #f8f9fa; /* Por enquanto claro, Passo 2 será escuro */
+    border: 2px solid #eaeeef;
+    border-radius: 15px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 15px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.visor-text {
+    font-size: 36px;
+    font-family: 'Courier New', monospace;
+    color: #333;
+    font-weight: bold;
+}
+
+/* 3. A Grade da Calculadora (O Coração do Layout) */
+.calc-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas iguais */
+    gap: 12px;
+}
+
+/* 4. Estilo Base dos Botões */
+.btn-calc {
+    height: 62px;
+    border: none;
+    border-radius: 18px;
+    font-size: 19px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s ease;
+    box-shadow: 0 4px 0px rgba(0, 0, 0, 0.05);
+}
+
+/* Efeito de clique (Sente o botão abaixando) */
+.btn-calc:active {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+/* 5. Hierarquia Visual de Cores (Passo 1) */
+
+/* Números: Neutros para não cansar a vista */
+.btn-number {
+    background-color: #fcfcfc;
+    color: #444;
+    border: 1px solid #e8e8e8;
+}
+
+/* Operadores: Destaque Azul Consistente */
+.btn-op {
+    background-color: #1089d3;
+    color: white;
+}
+
+/* Botão de Limpar: Alerta em Vermelho Suave */
+.btn-clear {
+    background-color: #ff5252;
+    color: white;
+    grid-column: span 2; /* Você pode mudar para span 2 se quiser ele maior */
+    text-decoration: none;
+}
+
+/* Botão de Igual: Confirmação em Verde */
+.btn-equal {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Botão Zero: Estilo clássico de calculadora ocupando 2 espaços */
+.btn-zero {
+    grid-column: span 2;
+}
+
+/* 6. Mensagens de Erro e Footer */
+.error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    text-align: center;
+    border: 1px solid #ffcdd2;
+}
+
+.footer {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.back-link {
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #1089d3;
+}
